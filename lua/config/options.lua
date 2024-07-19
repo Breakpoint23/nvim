@@ -17,7 +17,7 @@ opt.smartcase = true
 opt.hlsearch = false
 
 --Appearance
-
+opt.cursorline = true
 opt.relativenumber = true
 opt.termguicolors = true
 opt.colorcolumn = '100'

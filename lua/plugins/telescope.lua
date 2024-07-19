@@ -11,5 +11,17 @@ return {
      keymap.set("n","<leader>fh",":Telescope help_tags<CR>"),
      keymap.set("n","<leader>fb",":Telescope buffers<CR>"),
      keymap.set("n","<leader>cs",":Telescope colorscheme<CR>"),
-     }
+     },
+    config = function ()
+      require('telescope').setup({
+        defaults = {
+        previewer = true,
+        file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+        grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+        qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+      },
+
+    })
+    end
+    
     }
