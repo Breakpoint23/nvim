@@ -10,3 +10,9 @@ vim.api.nvim_create_autocmd ('TextYankPost',{
   end,
   
 })
+
+vim.api.nvim_create_autocmd("VimEnter",{pattern = "",callback = function ()
+
+  vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+  
+end})
